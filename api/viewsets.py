@@ -16,6 +16,6 @@ def usernameandpassword(request):
         if username!=None and password!=None:
             return Response({"message": "Got some data!", "data": request.data}, status=status.HTTP_200_OK)
         else:
-            return Response(status=status.HTTP_400_BAD_REQUEST)
+            return Response(status=status.HTTP_403_FORBIDDEN)
 
     return Response(status=status.HTTP_400_BAD_REQUEST)
